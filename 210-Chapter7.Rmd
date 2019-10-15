@@ -22,9 +22,52 @@ output:
 
 # A variable is **continuous** if it can take any of an infinite set of ordered values. Numbers and date-times are two examples of continuous variables.
   # You can compute this by hand by combining dplyr::count() and ggplot2::cut_width():
+
+# **Covariation** is the tendency for the values of two or more variables to vary together in a related way.
+
+# A **boxplot** is a type of visual shorthand for a distribution of values that is popular among statisticians. Each boxplot consists of:
+   #A box that stretches from the 25th percentile of the distribution to the 75th percentile, a distance known as the interquartile range (IQR). In the middle of the box is a line that displays the median, i.e. 50th percentile, of the distribution.
+   #Outliers that display observations that fall more than 1.5 times the IQR from either edge of the box.
+    #A line (or whisker) that extends from each end of the box and goes to the farthest non-outlier point in the distribution.
+
 ```
 
 ### 7.3.4 Exercises
 ```{r}
+# 1) X and Y are virtually similar, but the length is poportional to the Y value directly.
+# 2) Distribution decreases (?)
+# 3) 0.99 - 23
+# 4) 
+```
 
+### 7.4.1 Exercises
+```{r}
+# 1) NA disappears in the barplot.
+# 2) Removes the NA function.
+```
+
+### 7.5.1.1 Exercises
+```{r}
+# 1) Use a boxplot instead of a frequency plot.
+# 2)  The price ant carat are correlated -- the higher the carat the higher the price.
+# 3) 
+# 4) Histograms can be deceptive. 
+```
+
+### 7.5.2.1 Exercises
+```{r}
+# 1) Calculate the percentage of n.
+# 2) There are missing values that make the chart incorrect, and thus the higher values are controlling the scale.
+# 3) Longer names are better placed on the y-axis.
+```
+### 7.5.3.1 Exercises
+```{r}
+# 1) Use a boxplot instead of a frequency plot.
+# 2)  
+ggplot(diamonds, aes(carat, y = ..density.., colour = cut_width(price, 2000))) +
+  geom_freqpoly()
+
+# 3) Larger diamonds have a large variance in price (5k to 18k). Small diamonds have very little variance.
+# 4) 
+# 5) Scatterplots tend to visualize linear relationships best.
 ```
